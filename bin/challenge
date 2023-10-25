@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'challenge/runner'
+runner = Challenge::Runner.new(ARGV)
+runner.run

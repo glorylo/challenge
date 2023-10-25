@@ -2,20 +2,20 @@ require_relative "../lib/challenge/json_helper"
 include Challenge::JsonHelper
 
 describe Challenge::JsonHelper, "#indiff_access" do
-  context "Access an object via symbol or string" do
-    it "return attribute value when a valid symbol is provided " do
+  context "Access an attribute's value via symbol or string" do
+    it "return value when a valid symbol is provided " do
       obj = { a: "some value" }
       actual = indiff_access obj, :a
       expect(actual).to eq "some value"
     end
 
-    it "return attribute value when a valid string equivalent is provided" do
+    it "return value when a valid string equivalent is provided" do
       obj = { a: "some value" }
       actual = indiff_access obj, "a"
       expect(actual).to eq "some value"
     end
 
-    it "return attribute value when a valid symbol equivalent is provided" do
+    it "return value when a valid symbol equivalent is provided" do
       obj = { "a" => "some value" }
       actual = indiff_access obj, :a
       expect(actual).to eq "some value"
@@ -77,5 +77,5 @@ describe Challenge::JsonHelper, "#require_prop_as_type" do
   end
 end
 
-# TODO: 
+# TODO:
 # tests for require_prop_as_bool, require_prop_as_int, require_prop_as_string
