@@ -20,11 +20,11 @@ module Challenge
     # Takes arg for hash and attempts to access it using the key as a symbol. If it fails it falls back to using the string equivalent.
     def indiff_access(arg, key)
       if (key.is_a?(Symbol))
-        return arg[key].nil? ? arg[key.to_s] : arg[key]
+        arg[key].nil? ? arg[key.to_s] : arg[key]
       elsif (key.is_a?(String))
-        return arg[key].nil? ? arg[key.to_sym] : arg[key]
+        arg[key].nil? ? arg[key.to_sym] : arg[key]
       else
-        return arg[key]
+        arg[key]
       end
     end
 
