@@ -31,7 +31,7 @@ module Challenge
     def require_prop(obj, prop)
       return if obj.has_key? prop
 
-      raise ArgumentError, "object is missing '#{prop}' for object #{obj}"
+      raise ArgumentError, "missing '#{prop}' for object #{obj}"
     end
 
     def require_prop_as_type(obj, prop, classes, type)
@@ -39,7 +39,7 @@ module Challenge
       value = obj[prop]
       return if classes.include?(value.class)
 
-      raise ArgumentError, "object '#{obj}' with '#{prop}' has value '#{value}' should be '#{type}'."
+      raise ArgumentError, "object '#{obj}' with '#{prop}' has value '#{value}' should be #{type}."
     end
 
     def require_prop_as_bool(obj, prop)

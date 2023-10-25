@@ -35,6 +35,7 @@ Go to the project root direction (i.e. cd /path/to/challenge). On windows, the W
 > ruby -I lib ./bin/challenge -c ./path/to/companies.json -u ./path/to/users.json -o output.txt
 ```
 
+The json files provided must pass validation of the required fields and their respective types.
 The 'data' folder contains sample input files.
 
 ```
