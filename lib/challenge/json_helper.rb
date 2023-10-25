@@ -3,7 +3,7 @@
 require 'json'
 module Challenge
   # Helper methods to assist deserialization to classes, accessing of attributes, 
-  # json property type validation 
+  # json property type validation
   module JsonHelper
     # Loads a json file, if found.  If the json file is not an array of objects, ArgumentError will be raised.
     # If an optional transform block is given, it will do the conversion.
@@ -19,9 +19,9 @@ module Challenge
 
     # Takes arg for hash and attempts to access it using the key as a symbol. If it fails it falls back to using the string equivalent.
     def indiff_access(arg, key)
-      if (key.is_a?(Symbol))
+      if key.is_a?(Symbol)
         arg[key].nil? ? arg[key.to_s] : arg[key]
-      elsif (key.is_a?(String))
+      elsif key.is_a?(String)
         arg[key].nil? ? arg[key.to_sym] : arg[key]
       else
         arg[key]

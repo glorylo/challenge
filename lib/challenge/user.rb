@@ -3,8 +3,8 @@
 require_relative 'json_helper'
 
 include Challenge::JsonHelper
-# User is a domain object to encapsulate user data either deserializing from a file or instantiating it via #new
 module Challenge
+  # User is a domain object to encapsulate user data either deserializing from a file or instantiating it via #new
   class User
     ATTRIBUTES = %i[id first_name last_name email company_id email_status active_status tokens]
     attr_accessor(*ATTRIBUTES)

@@ -4,6 +4,9 @@ require_relative 'company'
 require_relative 'user'
 
 module Challenge
+  # CompanySummary class encapsulates the data for using the report.  
+  # The business logic is included in this class to aggregate company-to-user info.
+  # The methods: self.process, self.print_summary_to_file, self.print_summary is generate the result  
   class CompanySummary
     UserBalance = Struct.new(:user, :balance)
     attr_accessor :id, :name, :top_up, :email_status
@@ -38,7 +41,7 @@ module Challenge
     def append_user!(user, email_arr)
       balance = user.tokens + @top_up
       user_balance = UserBalance.new(user, balance)
-      # TODO: 
+      # TODO: unsure of duplicate handling
       # there is an issue on the test data for id: 33 where there are 2 users with the same id
       # unless user_already_exists?(user.id)
       #   email_arr << user_balance

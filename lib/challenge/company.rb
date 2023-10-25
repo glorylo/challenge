@@ -4,9 +4,9 @@ require 'json'
 require_relative 'json_helper'
 include Challenge::JsonHelper
 
-# Company is a domain class for encapsulating company info.  Can be instantiated using #load_from_file method
-# or by instantiating it with initialize providing a hash  
 module Challenge
+  # Company is a domain class for encapsulating company info.  Can be instantiated using #load_from_file method
+  # or by instantiating it with initialize providing a hash
   class Company
     ATTRIBUTES = %i[id name top_up email_status]
     attr_accessor(*ATTRIBUTES)
