@@ -76,3 +76,6 @@ describe Challenge::JsonHelper, "#require_prop_as_type" do
     end
   end
 end
+
+# TODO: 
+# tests for require_prop_as_bool, require_prop_as_int, require_prop_as_string
