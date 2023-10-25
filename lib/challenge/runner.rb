@@ -8,8 +8,8 @@ require_relative 'company'
 module Challenge
   # Runner for the command-line applicaton.  Requires -u (user's file), -c (company's file)
   # and -o the output file path to be generated.  The input files must be in json format as an array 
-  # of objects for the content.  The report will sum up the balance per user and calculating the new 
-  # balance.  
+  # of objects for the content.  The report will sum up the balance per user and calculate the  
+  # balance after top up. 
   class Runner
     def initialize(argv)
       @options = Options.new(argv)
