@@ -2,7 +2,7 @@
 
 *.rb text
 *.json text
-Gemfile.lock
+Gemfile.lock text
 
 *.png binary
 *.jpg binary
